@@ -245,7 +245,7 @@ class SamsungMXT40Profile(ManagerPlugin, MenuItemsProvider):
         samsung.request(samsung.connect_restart_req())
         samsung.close()
 
-    def on_request_menu_items(self, manager_menu: ManagerDeviceMenu, device: Device) -> List[DeviceMenuItem]:
+    def on_request_menu_items(self, manager_menu: ManagerDeviceMenu, device: Device, _powered: bool) -> List[DeviceMenuItem]:
         if self.name == device['Name']:
             _window = manager_menu.get_toplevel()
             assert isinstance(_window, Gtk.Window)
