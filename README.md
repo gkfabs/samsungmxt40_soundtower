@@ -1,25 +1,43 @@
 # SamsungMXT40
-A library to communicate on bluetooth with Samsung MX-T40 devices with command line example and blueman plugin
 
-### Installation
+This library communicates with Samsung MX-T40 devices through Bluetooth. It includes a command-line example and a Blueman plugin.
 
-### Get started
-How to connect to the device:
+## Installation
+
+Install the managed Python and uv versions:
+
+```shell
+mise install
+```
+
+Install the locked project dependencies:
+
+```shell
+mise run sync
+```
+
+Run the unit tests:
+
+```shell
+mise run test
+```
+
+## Get started
+
+Use this code to connect to the device:
 
 ```Python
 from samsungmxt40 import SamsungMXT40
 
-# Connection
 samsung = SamsungMXT40("2C:FD:B3:E6:D1:08")
 
-# Call the turn_off method
 samsung.turn_off()
 ```
 
-### main.py
-that's an exaustive command line example of what's capable the lib
+## main.py
 
-### SamsungMXT40Profile.py
-that's a plugin for blueman
+This file contains a command-line example for the library features.
 
-You need to create a symbolic link of this file in $INSTALLATION_DIR/blueman/plugins/manager/
+## SamsungMXT40Profile.py
+
+This file contains a Blueman plugin. Create a symbolic link to this file in `$INSTALLATION_DIR/blueman/plugins/manager/`.

@@ -1,0 +1,23 @@
+min_version = "2026.7.0"
+
+[tools]
+python = "3.10"
+uv = "0.12"
+
+[env]
+UV_PYTHON = { value = "{{ tools.python.path }}", tools = true }
+
+[settings]
+python.uv_venv_auto = "source"
+
+[tasks.sync]
+description = "Install the locked project dependencies"
+run = "uv sync --locked"
+
+[tasks.test]
+description = "Run the unit tests"
+run = "uv run --locked python -m unittest discover -s tests -p '*_tests.py'"
+
+[tasks.run]
+description = "Run the command-line example"
+run = "uv run --locked python main.py"

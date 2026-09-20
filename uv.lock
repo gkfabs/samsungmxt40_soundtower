@@ -1,0 +1,71 @@
+version = 1
+revision = 3
+requires-python = "==3.10.*"
+
+[manifest]
+overrides = [
+    { name = "pyobjc-core", marker = "sys_platform == 'darwin'" },
+    { name = "pyobjc-framework-cocoa", marker = "sys_platform == 'darwin'" },
+    { name = "pyobjc-framework-libdispatch", marker = "sys_platform == 'darwin'" },
+]
+
+[[package]]
+name = "pybluez2"
+version = "0.46"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyobjc-core", marker = "sys_platform == 'darwin'" },
+    { name = "pyobjc-framework-cocoa", marker = "sys_platform == 'darwin'" },
+    { name = "pyobjc-framework-libdispatch", marker = "sys_platform == 'darwin'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/dd/f9/980b70642ba99f1cc8cdc9042ad1bb68355bcf5bc68c892ced3bc3360e72/pybluez2-0.46.tar.gz", hash = "sha256:fffca90bd9a6329f01772c2ae66ead2b6b6dbf3daed7670890f6b8b462ab72a5", size = 50306, upload-time = "2022-08-13T16:53:51.635Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7d/e9/fe9e159aab5440a1e5e8592e5b86fca8d59e4a67d1d95ee75025f329889b/pybluez2-0.46-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:771bb4a424eee1901f8ed977fbf9e4a5027cdfaa05a742861f1780517435d35b", size = 31857, upload-time = "2022-08-13T16:53:30.296Z" },
+    { url = "https://files.pythonhosted.org/packages/55/b5/9e5b99aabc1a58767d146166233b4a388b55a1bec8f803c367c774aa585a/pybluez2-0.46-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:10294ea5aec397a468bf6fdec2944d4b9ee428657dfd95f4aee42a5e675ae34a", size = 190679, upload-time = "2022-08-13T16:53:32.414Z" },
+    { url = "https://files.pythonhosted.org/packages/76/00/29ff3deb498078be8c2b1e308081ca67f5e53983aaa89cf5f182e658a1ec/pybluez2-0.46-cp310-cp310-win_amd64.whl", hash = "sha256:b633df0fb1ef37ae4b6badb8b6f1015cf1f425e218faa182602a57679793a4d3", size = 32849, upload-time = "2022-08-13T16:53:34.393Z" },
+]
+
+[[package]]
+name = "pyobjc-core"
+version = "12.2.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a5/78/abc4ce5920305780aeb36b4067a86253378b36e29ba96673a3deb02eb03a/pyobjc_core-12.2.2.tar.gz", hash = "sha256:3906452339cd06a3bb07df103c2511d4cb0f7a22d8771c0b802eba15d9a642b6", size = 1067701, upload-time = "2026-08-11T19:43:39.059Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/1d/baf7197cee12f32a8eb9f8633093da1ec1ea702b0e1346bc1c7bfe022673/pyobjc_core-12.2.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:56c6c39f1de059fcbb174ebca5525505fc8feaa89be2a28c329bf09b6b25ee75", size = 6483051, upload-time = "2026-08-11T13:55:45.262Z" },
+]
+
+[[package]]
+name = "pyobjc-framework-cocoa"
+version = "12.2.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyobjc-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/75/76/49c6da2c6a831020b4854ba20079d5a1030474bffc776b7b73c2eeff8c15/pyobjc_framework_cocoa-12.2.2.tar.gz", hash = "sha256:c96c0ef69a71afbbb0e6a7d594b455c5fe47d62e0db376ee7a2b4b828c16ace9", size = 3132831, upload-time = "2026-08-11T19:44:02.288Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e1/dd/aba439652cae293a736680ef5ed5cc29419adbbac1c6d4555b910741d516/pyobjc_framework_cocoa-12.2.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:5a751c8033a3b51f7996f0327e0675eb44dcfdfe7920fae01e3d78b662723fff", size = 387296, upload-time = "2026-08-11T19:32:40.684Z" },
+]
+
+[[package]]
+name = "pyobjc-framework-libdispatch"
+version = "12.2.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyobjc-core" },
+    { name = "pyobjc-framework-cocoa" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f0/76/e40db30142b551790e5ab208e74de04cfc70823177a702c8c9e3f5e73034/pyobjc_framework_libdispatch-12.2.2.tar.gz", hash = "sha256:7cb799a7c5766cc1b68b68655a02c950646adfd2a743b7cbe8e4a04a51c44ecb", size = 40625, upload-time = "2026-08-11T19:44:46.277Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/91/b2/d038bd258426628a1e0b8021ebd9084b400398f1d10b9829fde863cc6767/pyobjc_framework_libdispatch-12.2.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:b392d482781893c9f71b22611648d3291d6a2fc85e1ff9f97377210074e4f93c", size = 20486, upload-time = "2026-08-11T19:37:26.145Z" },
+]
+
+[[package]]
+name = "samsung-mx-t40"
+version = "0.0.1"
+source = { editable = "." }
+dependencies = [
+    { name = "pybluez2" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pybluez2", specifier = "==0.46" }]

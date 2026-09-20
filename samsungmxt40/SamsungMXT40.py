@@ -1,4 +1,12 @@
 import time
+import socket
+import sys
+
+if sys.platform.startswith("linux"):
+    socket.AF_BLUETOOTH = getattr(socket, "AF_BLUETOOTH", 31)
+    socket.BTPROTO_L2CAP = getattr(socket, "BTPROTO_L2CAP", 0)
+    socket.BTPROTO_RFCOMM = getattr(socket, "BTPROTO_RFCOMM", 3)
+
 import bluetooth
 import logging
 from datetime import datetime
@@ -637,4 +645,3 @@ class SamsungMXT40:
         logging.info("usb_status_info_req")
         for command in self.request(self.usb_status_info_req()):
             payload = SamsungMXT40.getPayloadData(command)
-
